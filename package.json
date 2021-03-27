@@ -1,0 +1,85 @@
+{
+  "_from": "@snowpack/app-template-react-typescript",
+  "_id": "@snowpack/app-template-react-typescript@2.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ajeCJPs9oMI6IbblqeNcaGREMhrs3RET54TU/ECMMN08lXBpSBtOSZLkKGq8+fQIOcCArvEcx9CoY+MzqvTaPA==",
+  "_location": "/@snowpack/app-template-react-typescript",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@snowpack/app-template-react-typescript",
+    "name": "@snowpack/app-template-react-typescript",
+    "escapedName": "@snowpack%2fapp-template-react-typescript",
+    "scope": "@snowpack",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@snowpack/app-template-react-typescript/-/app-template-react-typescript-2.1.0.tgz",
+  "_shasum": "f36534004234043fd489bab02d4b2cca376c9549",
+  "_spec": "@snowpack/app-template-react-typescript",
+  "_where": "C:\\Users\\Konstantin\\Projects\\bot-maker\\bot-maker-frontend-snowpack",
+  "bugs": {
+    "url": "https://github.com/snowpackjs/snowpack/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "antd": "^4.12.3",
+    "mobx": "^6.1.7",
+    "mobx-react-lite": "^3.2.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.2.0",
+    "web-vitals": "^1.1.1"
+  },
+  "deprecated": false,
+  "description": "A preconfigured template for Snowpack with React and TypeScript",
+  "devDependencies": {
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-react-refresh": "^2.4.0",
+    "@snowpack/plugin-typescript": "^1.2.0",
+    "@snowpack/web-test-runner-plugin": "^0.2.0",
+    "@testing-library/react": "^11.0.0",
+    "@types/antd": "^1.0.0",
+    "@types/chai": "^4.2.13",
+    "@types/mocha": "^8.2.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/node": "^12.0.0",
+    "@types/snowpack-env": "^2.3.2",
+    "@web/test-runner": "^0.12.0",
+    "chai": "^4.2.0",
+    "prettier": "^2.0.5",
+    "snowpack": "^3.0.1",
+    "typescript": "^4.0.0"
+  },
+  "gitHead": "a01616bb0787d56cd782f94cecf2daa12c7594e4",
+  "homepage": "https://github.com/snowpackjs/snowpack/tree/main/create-snowpack-app/app-template-react-typescript#readme",
+  "keywords": [
+    "csa-template"
+  ],
+  "license": "MIT",
+  "name": "@snowpack/app-template-react-typescript",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowpackjs/snowpack.git",
+    "directory": "create-snowpack-app/app-template-react-typescript"
+  },
+  "scripts": {
+    "build": "snowpack build",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "start": "snowpack dev",
+    "test": "web-test-runner \"src/**/*.test.tsx\""
+  },
+  "version": "2.1.0"
+}
