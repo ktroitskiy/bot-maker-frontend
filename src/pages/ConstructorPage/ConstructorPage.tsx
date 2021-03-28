@@ -1,27 +1,45 @@
-import React, { FC, ReactElement, useEffect, useState, useCallback } from 'react';
+import React, { FC, ReactElement } from 'react';
 import ReactFlow from 'react-flow-renderer';
 
-import { SimpleMessage } from '../../components/Nodes/SimpleMessage';
+import { SimpleNode } from '../../components/Nodes/SimpleNode';
+import { CustomEdge } from '../../components/Edges/CustomEdge';
 
 import './ConstructorPage.css';
 
 export const ConstructorPage: FC = (): ReactElement => {
   const nodeTypes = {
-    simpleMessage: SimpleMessage
+    simpleNode: SimpleNode
+  };
+
+  const edgeTypes = {
+    custom: CustomEdge,
   };
   
   const initialElements = [
     {
       id: '1',
-      type: 'input',
-      data: { label: 'Input Node' },
-      position: { x: 250, y: 25 },
+      type: 'simpleNode',
+      data: {  },
+      position: { x: 0, y: 100 },
     },
     {
       id: '2',
-      type: 'simpleMessage',
-      data: { text: 'Another Node' },
-      position: { x: 100, y: 125 },
+      type: 'simpleNode',
+      data: { },
+      position: { x: 400, y: 400 },
+    },
+    {
+      id: '3',
+      type: 'simpleNode',
+      data: { },
+      position: { x: 800, y: 100 },
+    },
+    {
+      id: 'e1-2',
+      source: '1',
+      target: '2',
+      type: 'custom',
+      arrowHeadType: 'arrowclosed',
     },
   ];
 
@@ -30,6 +48,7 @@ export const ConstructorPage: FC = (): ReactElement => {
       <ReactFlow 
         elements={initialElements}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
       />
     </div>
   )
