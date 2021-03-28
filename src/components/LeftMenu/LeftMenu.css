@@ -1,10 +1,11 @@
 .left-menu {
-    width: 160px;
+    width: 120px;
     height: 100vh;
     z-index: 10;
-    padding-top: 100px;
+    padding-top: 105px;
     position: fixed;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 4px 4px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
 }
 
 .left-menu .ant-menu {
@@ -17,13 +18,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: black;
+    justify-content: flex-end;
+    color: #172b4d;
     border-bottom: 1px solid #f0f0f0;
     margin: 0 !important;
+    font-weight: 500;
 }
 
 .left-menu .ant-menu-item .ant-menu-item-icon {
-    font-size: 32px;
+    font-size: 2.5em;
     margin-right: 0;
 }

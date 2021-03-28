@@ -5,6 +5,7 @@ import {
   PieChartOutlined,
   DesktopOutlined
 } from '@ant-design/icons';
+import { FiHome, FiSettings } from "react-icons/fi";
 
 import './LeftMenu.css';
 
@@ -26,8 +27,8 @@ export const LeftMenu: FC = (): ReactElement => {
       <Menu
         mode="inline"
       >
-        <MenuItem icon={<PieChartOutlined />} to="/" name="Dashboard" />
-        <MenuItem icon={<DesktopOutlined />} to="/constructor" name="Contructor" /> 
+        <MenuItem icon={<FiHome />} to="/" name="Dashboard" />
+        <MenuItem icon={<FiSettings />} to="/constructor" name="Contructor" /> 
       </Menu>
     </div>
   );

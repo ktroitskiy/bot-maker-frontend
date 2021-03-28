@@ -11,19 +11,21 @@ import './MainLayout.css';
 
 export const MainLayout: FC = (): ReactElement => {
   return (
-    <Layout>
-      <TopMenu />
-        <LeftMenu />
-        <div className="page">
-        <Switch>
-          <Route exact path="/">
-            <Dashboard />
-          </Route>
-          <Route path="/constructor">
-            <ConstructorPage />
-          </Route>
-        </Switch>
-      </div>
-    </Layout>
+    <div className="main-layout">
+      <Layout>
+        <TopMenu />
+          <LeftMenu />
+          <div className="page">
+          <Switch>
+            <Route exact path="/">
+              <Dashboard />
+            </Route>
+            <Route path="/constructor">
+              <ConstructorPage />
+            </Route>
+          </Switch>
+        </div>
+      </Layout>
+    </div>
   )
 };

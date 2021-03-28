@@ -7,4 +7,16 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(240, 242, 245);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.panel-block {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 4px 4px 4px rgba(0,0,0,0.1);
 }
