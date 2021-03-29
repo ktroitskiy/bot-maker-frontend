@@ -1,8 +1,7 @@
 import React, { useCallback } from 'react';
 import { Button, Dropdown, Menu } from 'antd';
 import { FiMenu } from 'react-icons/fi';
-
-import './NodeActions.css';
+import styled from 'styled-components';
 
 const menu = (
   <Menu>
@@ -21,9 +20,15 @@ const menu = (
 export const NodeActions = () => {
   return (
     <Dropdown overlay={menu}>
-      <div className="menu-wrapper">
+      <NodeActionsMenuWrapper>
         <FiMenu />
-      </div>
+      </NodeActionsMenuWrapper>
     </Dropdown>
   )
 };
+
+const NodeActionsMenuWrapper = styled.div`
+  display: flex;
+  padding: 0 10px;
+  margin-left: 10px;
+`;

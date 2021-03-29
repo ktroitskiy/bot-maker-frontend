@@ -1,11 +1,20 @@
 import React, { FC, ReactElement } from 'react';
-
-import './TopMenu.css';
+import styled from 'styled-components';
 
 export const TopMenu: FC = (): ReactElement => {
   return (
-    <div className="top-menu">
-
-    </div>
+    <TopMenuWrapper />
   )
 };
+
+const TopMenuWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 4px 4px 4px rgba(0,0,0,0.1);
+  z-index: 20;
+  padding-bottom: 100px;
+`;

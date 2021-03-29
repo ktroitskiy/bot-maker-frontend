@@ -1,21 +1,22 @@
 import React, { FC, ReactElement } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Layout, Col } from 'antd';
+import styled from 'styled-components';
 
 import { TopMenu } from '../../components/TopMenu/TopMenu';
 import { LeftMenu } from '../../components/LeftMenu/LeftMenu';
 import { Dashboard } from '../../pages/Dashboard/Dashboard';
 import { ConstructorPage } from '../../pages/ConstructorPage/ConstructorPage';
 
-import './MainLayout.css';
+import { Page } from '../../styles/Blocks';
 
 export const MainLayout: FC = (): ReactElement => {
   return (
-    <div className="main-layout">
+    <MainLayoutWrapper>
       <Layout>
         <TopMenu />
           <LeftMenu />
-          <div className="page">
+          <Page>
           <Switch>
             <Route exact path="/">
               <Dashboard />
@@ -24,8 +25,16 @@ export const MainLayout: FC = (): ReactElement => {
               <ConstructorPage />
             </Route>
           </Switch>
-        </div>
+        </Page>
       </Layout>
-    </div>
+    </MainLayoutWrapper>
   )
 };
+
+const MainLayoutWrapper = styled.div`
+  height: 100%;
+
+  & .ant-layout {
+    height: 100%;
+  }
+`;

@@ -1,10 +1,12 @@
 import React, { FC, ReactElement } from 'react';
 import ReactFlow from 'react-flow-renderer';
+import styled from 'styled-components';
 
 import { SimpleNode } from '../../components/Nodes/SimpleNode';
 import { CustomEdge } from '../../components/Edges/CustomEdge';
 
-import './ConstructorPage.css';
+import { PanelBlock } from '../../styles/Blocks';
+
 
 export const ConstructorPage: FC = (): ReactElement => {
   const nodeTypes = {
@@ -44,12 +46,17 @@ export const ConstructorPage: FC = (): ReactElement => {
   ];
 
   return (
-    <div className="constructor-page panel-block">
+    <StyledConstructorPage>
       <ReactFlow 
         elements={initialElements}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
       />
-    </div>
+    </StyledConstructorPage>
   )
 };
+
+const StyledConstructorPage = styled(PanelBlock)`
+  height: 600px;
+  background-color: #0e0e0e;
+`;
